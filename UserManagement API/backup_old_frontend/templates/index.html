@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Dashboard</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">User Dashboard</div>
+        <ul class="nav-links">
+            <li><a href="#login">Login</a></li>
+            <li><a href="#signup">Sign Up</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to User Management</h1>
+        <p>Manage your account securely with FastAPI & JWT Authentication.</p>
+    </section>
+
+    <!-- Login Form -->
+    <section id="login" class="form-section">
+        <h2>Login</h2>
+        <form id="login-form">
+            <label>Email
+                <input type="email" id="login-email" placeholder="Enter your email" required>
+            </label>
+
+            <label>Password
+                <input type="password" id="login-password" placeholder="Enter your password" required>
+            </label>
+
+            <p id="login-error" class="form-error" hidden></p>
+
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </section>
+
+    <!-- Sign Up Form -->
+    <section id="signup" class="form-section">
+        <h2>Sign Up</h2>
+        <form id="register-form">
+            <label>Name
+                <input type="text" id="register-name" placeholder="Enter your name" required>
+            </label>
+
+            <label>Email
+                <input type="email" id="register-email" placeholder="Enter your email" required>
+            </label>
+
+            <label>Password
+                <input type="password" id="register-password" placeholder="Enter your password" required minlength="6">
+            </label>
+
+            <label>Role
+                <select id="register-role" required>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </label>
+
+            <p id="register-error" class="form-error" hidden></p>
+
+            <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+    </section>
+<!-- At the bottom of index.html -->
+<script type="module" src="../static/js/api.js"></script>
+<script type="module" src="../static/js/auth.js"></script>    
+</script>
+</body>
+</html>

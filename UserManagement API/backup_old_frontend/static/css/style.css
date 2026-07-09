@@ -1,0 +1,23 @@
+# User Management Application
+
+A full-stack web application for managing users with authentication and role-based access control.
+
+## Features
+✅ User Registration & Login with JWT Authentication  
+✅ Role-Based Access Control (Admin/User)  
+✅ Complete CRUD Operations (Create, Read, Update, Delete)  
+✅ Profile Management  
+✅ Secure Password Hashing with Bcrypt  
+✅ Responsive UI Design  
+
+## Tech Stack
+- **Backend:** FastAPI, SQLAlchemy, MySQL
+- **Frontend:** HTML5, CSS3, Vanilla JavaScript (ES6 Modules)
+- **Authentication:** JWT (JSON Web Tokens)
+- **Password Security:** Bcrypt hashing
+
+## Installation
+
+### 1. Install Python Dependencies
+```bash
+pip install -r requirements.txt

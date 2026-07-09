@@ -1,0 +1,198 @@
+:root {
+  --ink: #1a1d24;
+  --paper: #f5f4f0;
+  --panel: #ffffff;
+  --line: #ddd9d0;
+  --accent: #35618f;
+  --accent-dark: #234563;
+  --danger: #b3432b;
+  --muted: #6b6a63;
+  --radius: 6px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", -apple-system, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+}
+
+/* ---------- Navbar (index.html) ---------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: var(--ink);
+  color: #fff;
+}
+.navbar .logo { font-weight: 700; font-size: 1.1rem; }
+.nav-links { list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; }
+.nav-links a { color: #fff; text-decoration: none; font-size: 0.9rem; }
+.nav-links a:hover { text-decoration: underline; }
+
+/* ---------- Hero (index.html) ---------- */
+.hero {
+  text-align: center;
+  padding: 48px 24px 32px;
+}
+.hero h1 { margin: 0 0 8px; font-size: 1.8rem; }
+.hero p { color: var(--muted); margin: 0; }
+
+/* ---------- Forms ---------- */
+.form-section {
+  max-width: 380px;
+  margin: 24px auto;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+}
+.form-section h2 { margin: 0 0 16px; font-size: 1.1rem; }
+
+form { display: flex; flex-direction: column; gap: 12px; }
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+input, select {
+  font-size: 0.95rem;
+  padding: 9px 10px;
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  background: var(--paper);
+  color: var(--ink);
+}
+input:focus, select:focus, button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 1px;
+}
+
+.btn {
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+.btn-primary { background: var(--accent); color: #fff; }
+.btn-primary:hover { background: var(--accent-dark); }
+.btn-ghost { background: transparent; border-color: var(--line); color: var(--ink); }
+.btn-ghost:hover { border-color: var(--ink); }
+.btn-icon { padding: 5px 9px; font-size: 0.8rem; margin-left: 6px; }
+
+.form-error {
+  background: #f7e6e0;
+  color: var(--danger);
+  border: 1px solid #e5b8a8;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 0.82rem;
+  margin: 0;
+}
+.form-success {
+  background: #e5f1ea;
+  color: var(--accent-dark);
+  border: 1px solid #b9d9c8;
+  border-radius: 4px;
+  padding: 8px 10px;
+  font-size: 0.82rem;
+  margin: 0;
+}
+
+.muted { color: var(--muted); font-size: 0.8rem; }
+
+/* ---------- Dashboard topbar ---------- */
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 32px;
+  background: var(--ink);
+  color: #fff;
+}
+.topbar h1 { font-size: 1.1rem; margin: 0; }
+.who { display: flex; align-items: center; gap: 12px; font-size: 0.88rem; }
+.badge {
+  background: var(--accent);
+  color: #fff;
+  padding: 2px 9px;
+  border-radius: 20px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.topbar .btn-ghost { border-color: rgba(255,255,255,0.35); color: #fff; }
+.topbar .btn-ghost:hover { border-color: #fff; }
+
+.main { max-width: 900px; margin: 0 auto; padding: 32px; }
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px;
+  margin-bottom: 28px;
+}
+.panel h2 { margin: 0 0 16px; font-size: 1.05rem; }
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.88rem;
+}
+.user-table th, .user-table td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+}
+.user-table th {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--muted);
+  background: #efece3;
+}
+.user-table tbody tr:last-child td { border-bottom: none; }
+
+.role-pill {
+  font-size: 0.72rem;
+  padding: 2px 8px;
+  border-radius: 3px;
+  background: #e3ecf3;
+  color: var(--accent-dark);
+}
+.role-pill.admin { background: #f3e6d8; color: #8a5a1f; }
+
+/* ---------- Modal ---------- */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 24, 31, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 10;
+}
+.modal {
+  width: 100%;
+  max-width: 380px;
+  background: var(--panel);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+.modal h3 { margin: 0 0 16px; font-size: 1rem; }
+.modal-actions { display: flex; justify-content: flex-end; gap: 8px; margin-top: 4px; }
+
+@media (max-width: 560px) {
+  .topbar, .navbar { padding: 14px 16px; flex-direction: column; gap: 10px; }
+  .main { padding: 20px 14px; }
+}
